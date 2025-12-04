@@ -2,6 +2,8 @@
 
 import React from 'react';
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
+import { ThemeProvider } from './context/ThemeContext';
+import { SettingsProvider } from './context/SettingsContext';
 import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
 import HomePage from './pages/HomePage';
@@ -22,6 +24,8 @@ const App: React.FC = () => {
         Loading application...
       </div>
     }>
+      <SettingsProvider>
+        <ThemeProvider initialTheme={ThemeMode.DARK}> {/* Set initial theme to DARK */}
           <ToastProvider> 
             <Router>
               <div className="flex flex-col min-h-screen">
@@ -48,6 +52,8 @@ const App: React.FC = () => {
               </div>
             </Router>
           </ToastProvider>
+        </ThemeProvider>
+      </SettingsProvider>
     </React.Suspense>
   );
 };
