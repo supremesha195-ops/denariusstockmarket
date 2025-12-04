@@ -3,7 +3,7 @@
 import React from 'react';
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import { ThemeProvider } from './src/context/ThemeContext';
-import { SettingsProvider } from './src/context/SettingsContext';
+import { SettingsProvider } from './src/context/settingscontext';
 import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
 import HomePage from './pages/HomePage';
