@@ -4,9 +4,9 @@ import React from 'react';
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import { ThemeProvider } from './src/context/ThemeContext';
 import { SettingsProvider } from './src/context/settingscontext';
-import Navbar from './components/layout/navbar';
-import Footer from './components/layout/footer';
-import HomePage from './pages/home';
+import Navbar from './src/components/layout/navbar';
+import Footer from './src/components/layout/footer';
+import HomePage from './src/pages/home';
 // Fix: Corrected the import statement for NSEStocksPage
 import NSEStocksPage from './pages/NSEStocksPage'; 
 import TradePage from './pages/TradePage';
